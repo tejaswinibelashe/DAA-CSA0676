@@ -1,0 +1,11 @@
+def reverse_string(string, i):
+  if i == len(string) // 2:
+    return
+  else:
+    temp = string[i]
+    string[i] = string[len(string) - i - 1]
+    string[len(string) - i - 1] = temp
+    reverse_string(string, i + 1)
+text = "World"
+reverse_string(text, 0)
+print(f"Reversed string: {text}")
