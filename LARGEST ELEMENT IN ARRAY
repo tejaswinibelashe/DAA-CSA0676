@@ -1,0 +1,10 @@
+def largest_element(arr, i):
+  if i == len(arr) - 1:
+    return arr[i]
+  else:
+    largest = largest_element(arr, i + 1)
+    return largest if largest > arr[i] else arr[i]
+
+arr = [10, 25, 12, 3, 70]
+largest = largest_element(arr, 0)
+print(f"Largest element in the array is {largest}")
