@@ -1,0 +1,10 @@
+def copy_string(source, dest, i):
+  if source[i] == '\0':
+    return
+  else:
+    dest[i] = source[i]
+    copy_string(source, dest, i + 1)
+source_str = "Hello"
+dest_str = [None] * len(source_str) + ["\0"]  # Create destination with null terminator
+copy_string(source_str, dest_str, 0)
+print(f"Copied string: {''.join(dest_str[:-1])}")  # Remove null terminator from output
