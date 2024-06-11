@@ -1,0 +1,22 @@
+# Example algorithm with O(1) time complexity
+def constant_time_complexity(n):
+ return n * 2
+# Example algorithm with O(n) time complexity
+def linear_time_complexity(lst):
+ for item in lst:
+ print(item)
+# Example algorithm with O(n^2) time complexity
+def quadratic_time_complexity(lst):
+ for i in lst:
+ for j in lst:
+ print(i, j)
+# Example algorithm with O(log n) time complexity
+def logarithmic_time_complexity(n):
+ while n > 1:
+ n = n // 2
+ print(n)
+# Example algorithm with O(n log n) time complexity
+def n_log_n_time_complexity(lst):
+ lst.sort()
+ for item in lst:
+ print(item)
